@@ -12,7 +12,7 @@
     </div>
     <div
       v-if="results.length > 0"
-      class="absolute mt-12 ml-2 rounded bg-gray-600 w-60"
+      class="absolute z-50 mt-12 ml-2 rounded bg-gray-600 w-60"
     >
       <ul>
         <li
