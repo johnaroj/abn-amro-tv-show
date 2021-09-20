@@ -11,7 +11,7 @@
       <li>
         <router-link
           to='/action'
-          class="ml-5"
+          class="ml-5 hover:text-yellow-600"
         >
           Action
         </router-link>
@@ -19,7 +19,7 @@
       <li>
         <router-link
           to='/comedy'
-          class="ml-5"
+          class="ml-5 hover:text-yellow-600"
         >
           Comedy
         </router-link>
@@ -27,7 +27,7 @@
       <li>
         <router-link
           to='/drama'
-          class="ml-5"
+          class="ml-5 hover:text-yellow-600"
         >
           Drama
         </router-link>
@@ -35,7 +35,7 @@
       <li>
         <router-link
           to='/thriller'
-          class="ml-5"
+          class="ml-5 hover:text-yellow-600"
         >
           Thriller
         </router-link>
