@@ -7,7 +7,7 @@
       <VideoCameraIcon class="h-8 text-white " />
       <h1 class='text-2xl font-semibold whitespace-nowrap'>TV Shows</h1>
     </div>
-    <ul class="mt-5 hidden md:inline-flex">
+    <ul class="mt-5 absolute top-16 md:relative md:top-0 flex">
       <li>
         <router-link
           to='/action'

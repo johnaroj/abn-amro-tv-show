@@ -1,11 +1,14 @@
 <template>
   <div class="mr-2">
     <router-link :to="{ name: 'Show', params: { id: data.id }}">
-      <img
-        :src="data.image.original"
-        alt=""
-        class="hover:opacity-75 transition ease-in-out duration-150"
-      >
+      <div class="aspect-w-3 aspect-h-4">
+        <img
+          :src="data.image.original"
+          :alt="data.name"
+          class="object-cover hover:opacity-75 transition ease-in-out duration-150"
+        >
+      </div>
+
       <h3>{{data.name}}</h3>
       <div class="flex">
         <StarIcon class="h-6 text-yellow-600" />

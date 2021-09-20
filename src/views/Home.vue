@@ -10,6 +10,5 @@ export default {
   components: {
     PopularShow,
   },
-  setup() {},
 };
 </script>

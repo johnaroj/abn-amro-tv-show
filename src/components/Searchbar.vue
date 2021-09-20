@@ -3,7 +3,7 @@
 
     <input
       type="text"
-      class="rounded-full bg-gray-600 px-9 w-60 h-10 focus:outline-shadow focus:outline-none"
+      class="rounded-full bg-gray-600 px-9 w-36 sm:w-44 md:w-52 lg:w-96 h-10 focus:outline-shadow focus:outline-none"
       placeholder="search..."
       v-model="q"
     >
@@ -25,8 +25,8 @@
           >
             <img
               :src="item.show.image?.original"
+              :alt="item.show.name"
               class="w-10"
-              alt=""
             >
             <span class="ml-3">{{item.show?.name}}</span>
           </router-link>
@@ -37,6 +37,7 @@
     <img
       src='https://avataaars.io/?avatarStyle=Transparent&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'
       class="h-10 bg-white rounded-full"
+      alt="profile"
     />
   </div>
 </template>
