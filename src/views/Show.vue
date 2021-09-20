@@ -3,6 +3,7 @@
     <Loader v-show="loading" />
     <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-3 lg:aspect-w-3 lg:aspect-h-4">
       <img
+        v-if="data.image"
         class="object-cover"
         :src="data.image?.original"
         :alt="data.name"

@@ -24,6 +24,7 @@
             class="flex items-center border-b border-gray-500 p-2"
           >
             <img
+              v-if="item.show.image"
               :src="item.show.image?.original"
               :alt="item.show.name"
               class="w-10"

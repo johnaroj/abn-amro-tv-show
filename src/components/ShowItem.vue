@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'Show', params: { id: data.id }}">
       <div class="aspect-w-3 aspect-h-4">
         <img
+          v-if="data.image"
           :src="data.image.original"
           :alt="data.name"
           class="object-cover hover:opacity-75 transition ease-in-out duration-150"
