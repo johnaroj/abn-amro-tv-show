@@ -1,4 +1,4 @@
-import { toRefs, reactive, onMounted } from 'vue'
+import { toRefs, reactive } from 'vue'
 
 export default function (genre) {
     const state = reactive({
@@ -17,11 +17,7 @@ export default function (genre) {
             state.loading = false
         }
     }
-    onMounted(() => {
-        fetchData();
-    })
-
-
+    fetchData();
 
     return {
         ...toRefs(state)

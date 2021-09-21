@@ -6,6 +6,7 @@ export default function (query) {
         loading: true,
         error: null
     })
+
     const fetchData = async () => {
         try {
             const res = await fetch('https://api.tvmaze.com/search/shows?q=' + query);
@@ -18,8 +19,6 @@ export default function (query) {
         }
     }
     fetchData();
-
-
 
     return {
         ...toRefs(state)

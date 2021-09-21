@@ -32,7 +32,7 @@ export default {
   },
   setup(props) {
     const { show: data } = reactive(props);
-
+    console.log(data);
     return {
       data,
     };

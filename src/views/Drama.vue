@@ -1,5 +1,5 @@
 <template>
-  <Loader v-show="loading" />
+  <Loader v-if="loading" />
   <div class="mt-14 md:mt-0">
     <h2 class="mt-5 text-yellow-500 uppercase text-lg font-semibold">{{route.name}}</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">

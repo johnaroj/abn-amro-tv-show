@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto mt-14 space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-    <Loader v-show="loading" />
+    <Loader v-if="loading" />
     <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-3 lg:aspect-w-3 lg:aspect-h-4">
       <img
         v-if="data.image"
@@ -46,24 +46,28 @@ export default {
     const state = reactive({
       data: {},
       loading: true,
+      error: null,
     });
 
     const formatGenres = (arr) => {
       return arr && arr.length > 0 && arr.join(", ");
     };
-    watch(route, () => {
-      if (route.params.id) {
-        const { data, loading } = useFetchTvShow(route.params.id);
 
-        state.data = data;
-        state.loading = loading;
-      }
-    });
-    onMounted(() => {
-      const { data, loading } = useFetchTvShow(route.params.id);
+    const fetch = () => {
+      const { data, loading, error } = useFetchTvShow(route.params.id);
 
       state.data = data;
       state.loading = loading;
+      state.error = error;
+    };
+
+    watch(route, () => {
+      if (route.params.id) {
+        fetch();
+      }
+    });
+    onMounted(() => {
+      fetch();
     });
 
     return {

@@ -19,6 +19,7 @@
 import useFetchPopular from "@/use/fetchPopular";
 import ShowItem from "@/components/ShowItem";
 export default {
+  name: "PopularShows",
   components: { ShowItem },
   setup() {
     const { data, error, loading } = useFetchPopular();
