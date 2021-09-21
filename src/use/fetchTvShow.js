@@ -1,4 +1,5 @@
 import { toRefs, reactive } from 'vue'
+import { api } from '@/config'
 
 export default function (id) {
     const state = reactive({
@@ -9,7 +10,7 @@ export default function (id) {
 
     const fetchData = async () => {
         try {
-            const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
+            const res = await fetch(`${api}/shows/${id}`);
             const json = await res.json()
             state.data = json;
         } catch (error) {

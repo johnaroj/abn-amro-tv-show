@@ -1,4 +1,5 @@
 import { toRefs, reactive } from 'vue'
+import { api } from '@/config'
 
 export default function (genre) {
     const state = reactive({
@@ -8,7 +9,7 @@ export default function (genre) {
     })
     const fetchData = async () => {
         try {
-            const res = await fetch('https://api.tvmaze.com/shows');
+            const res = await fetch(`${api}/shows`);
             const json = await res.json()
             state.data = json.filter(show => show.genres.includes(genre));
         } catch (error) {

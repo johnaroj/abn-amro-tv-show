@@ -1,4 +1,5 @@
 import { toRefs, reactive } from 'vue'
+import { api } from '@/config'
 
 export default function () {
     const state = reactive({
@@ -6,9 +7,11 @@ export default function () {
         loading: true,
         error: null
     })
+
     const fetchData = async () => {
         try {
-            const res = await fetch('https://api.tvmaze.com/shows');
+            console.log()
+            const res = await fetch(`${api}/shows`);
             const json = await res.json()
             state.data = json.sort(function (a, b) { return b.rating.average - a.rating.average });
         } catch (error) {

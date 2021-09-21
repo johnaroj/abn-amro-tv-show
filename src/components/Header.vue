@@ -1,8 +1,8 @@
 <template>
   <header class="pb-3 flex justify-between border-b border-gray-500">
-  <Navbar />
-  <Searchbar />
-</header>
+    <Navbar />
+    <Searchbar />
+  </header>
 </template>
 <script>
 import Navbar from "@/components/Navbar.vue";
