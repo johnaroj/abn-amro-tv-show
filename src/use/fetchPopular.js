@@ -10,7 +10,6 @@ export default function () {
 
     const fetchData = async () => {
         try {
-            console.log()
             const res = await fetch(`${api}/shows`);
             const json = await res.json()
             state.data = json.sort(function (a, b) { return b.rating.average - a.rating.average });

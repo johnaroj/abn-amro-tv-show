@@ -1,7 +1,10 @@
 <template>
   <div class="mr-2">
     <router-link :to="{ name: 'Show', params: { id: data.id }}">
-      <div class="aspect-w-3 aspect-h-4">
+      <div
+        class="aspect-w-3 aspect-h-4"
+        :class="{ 'bg-gray-200': !data.image}"
+      >
         <img
           v-if="data.image"
           :src="data.image.original"

@@ -1,9 +1,6 @@
-import { mount, shallowMount } from "@vue/test-utils"
+import { shallowMount } from "@vue/test-utils"
 import Show from '@/views/Show.vue'
 import Home from '@/views/Home.vue'
-import Action from '@/views/Action.vue'
-import Comedy from '@/views/Comedy.vue'
-import Thriller from '@/views/Thriller.vue'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
