@@ -1,14 +1,22 @@
 # tv-show
-This Assesment is meant for ABN to review my developer skills for a frontend position.
 
-In this Project I decided to go out of my confort zone and start working Vuejs v3. As I am coming from a Reactjs/Nextjs based developer.
-I have use some of the same working structure. For the Pages folder as in React/Next i use the Views folders and for the components i use the same structure.
-In my opinion using a tool like VUEX can be a little overkill so i decided to use the composition function like the useHooks as in reactjs.
-The composition functions are more like straight up javascript functions. These functions i use to call fetch api and return more information about data loading and error. 
-As for the style I use a new tool name tailwindcss. Tailwindcss is a utility-first style library that gives programmer and designers a better user experience.
-I could have choosen another Css framework but by chosing this utility library, i can show that i am someone who likes kuuping ahead of new technologies.
-As i am new to vue testing i decided to make some easy testing as a good learning curve so i can enter little by little into TDD later on.
+This assessment is meant for ABN to review my developer skills for the frontend position.
 
+ 
+
+In this project I decided to go out of my comfort zone and start working with Vuejs v3, as I am coming from Reactjs/Nextjs based developmentx§.
+
+I have use some of the same working structure. For the Pages folder as in React/Next I use the Views folders and for the components I use the same structure.
+
+In my opinion using a tool like VUEX can be a little overkill so I decided to use the composition function like the useHooks as in Reactjs.
+
+The composition functions are more like straight up JavaScript functions. These functions I use to call fetch api and return more information about data loading and error. 
+
+As for the style I use a new tool name Tailwind CSS. Tailwind CSS is a utility-first style library that gives programmer and designers a better user experience.
+
+I could have chosen another CSS framework but by choosing this utility library, I can show that I am someone who likes keeping ahead of new technologies.
+
+As I am new to Vue testing I decided to make some easy testing as a good learning curve so I can enter little by little into TDD later on.
 
 ## Introduction
 The purpose of this assignment is to evaluate candidate’s familiarity with frontend technologies, programming patterns and to showcase a sample of what clean and reusable code means to the candidate. This is also helps in understanding candidate’s basic design knowledge.
