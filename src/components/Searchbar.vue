@@ -68,7 +68,7 @@ export default {
     };
 
     watch(searchQuery, () => {
-      if (searchQuery.value.length > 3) {
+      if (searchQuery.value.length > 2) {
         searchShows(searchQuery.value);
       } else {
         state.results = [];

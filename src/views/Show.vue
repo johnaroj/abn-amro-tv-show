@@ -19,7 +19,11 @@
         class="mt-5"
         v-html="data.summary"
       ></div>
-      <span class="mt-5 font-semibold">Featured Cast</span>
+      <div class="flex flex-col">
+        <span class="mt-5 font-semibold">Language</span>
+        <span class="text-gray-500">{{data.language}}</span>
+      </div>
+
       <div class="flex flex-col mt-5">
         <span>Network </span>
         <span class="text-gray-500">{{data.network?.name}}</span>
