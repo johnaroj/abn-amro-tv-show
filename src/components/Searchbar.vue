@@ -5,7 +5,7 @@
       type="text"
       class="rounded-full bg-gray-600 px-9 w-36 sm:w-44 md:w-52 lg:w-96 h-10 focus:outline-shadow focus:outline-none"
       placeholder="search..."
-      v-model="q"
+      v-model="searchQuery"
     >
     <div class="absolute top-0">
       <SearchIcon class='h-5 text-gray-300 mt-3 mr-auto fill-current' />
@@ -53,7 +53,7 @@ export default {
   components: { SearchIcon },
   setup() {
     const route = useRoute();
-    const q = ref("");
+    const searchQuery = ref("");
     const state = reactive({
       results: [],
       loading: true,
@@ -67,9 +67,9 @@ export default {
       state.error = error;
     };
 
-    watch(q, () => {
-      if (q.value.length > 3) {
-        searchShows(q.value);
+    watch(searchQuery, () => {
+      if (searchQuery.value.length > 3) {
+        searchShows(searchQuery.value);
       } else {
         state.results = [];
       }
@@ -77,10 +77,10 @@ export default {
 
     watch(route, () => {
       state.result = [];
-      q.value = "";
+      searchQuery.value = "";
     });
     return {
-      q,
+      searchQuery,
       ...toRefs(state),
     };
   },
